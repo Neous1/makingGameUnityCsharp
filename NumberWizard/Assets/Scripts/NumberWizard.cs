@@ -27,10 +27,6 @@ public class NumberWizard : MonoBehaviour {
 		print("Up = higher, down = lower , return = equal");
 	
 	}
-	void NextGuess(){
-		guess = (min + max)/2;
-		print("Higher or lower that " + guess);
-	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -46,5 +42,12 @@ public class NumberWizard : MonoBehaviour {
 		} else if (Input.GetKeyDown (KeyCode.Return)) {
 			print ("I won!");	
 		}
+	}
+
+	
+	void NextGuess(){
+		guess = (min + max)/2;
+		print("Higher or lower that " + guess);
+		print("Up = higher, down = lower , return = equal");
 	}
 }
