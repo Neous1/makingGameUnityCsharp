@@ -9,6 +9,7 @@ public class NumberWizard : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		StartGame ();
 
 			
 	}
@@ -16,8 +17,7 @@ public class NumberWizard : MonoBehaviour {
 		//fix the rounding problem to retun max
 		max = max + 1;
 		print("Welcome to Number Wizard");
-		print("Pick a number in your head, but don't tell me !");
-		
+		print("Pick a number in your head, but don't tell me !");	
 		
 		
 		print("The highest number you can pick is " + max);
@@ -27,20 +27,22 @@ public class NumberWizard : MonoBehaviour {
 		print("Up = higher, down = lower , return = equal");
 	
 	}
+	void NextGuess(){
+		guess = (min + max)/2;
+		print("Higher or lower that " + guess);
+	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.UpArrow)) {
 			//set guess to min
 			min = guess;
-			//reset guess
-			guess = (min + max)/2;
-			print("Higher or lower that " + guess);
+			NextGuess();
 
 		} else if (Input.GetKeyDown (KeyCode.DownArrow)) {
 			max = guess;
-			guess = (min + max)/2;
-			print("Higher or lower that " + guess);
+			NextGuess();
+
 		} else if (Input.GetKeyDown (KeyCode.Return)) {
 			print ("I won!");	
 		}
