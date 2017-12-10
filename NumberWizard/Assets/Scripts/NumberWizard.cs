@@ -3,13 +3,14 @@ using System.Collections;
 
 public class NumberWizard : MonoBehaviour {
 	//make min nad max global
-
 	int max = 1000;
 	int min = 1;
 	int guess = 500; 
 
 	// Use this for initialization
 	void Start () {
+		//fix the rounding problem to retun max
+		max = max + 1;
 		print("Welcome to Number Wizard");
 		print("Pick a number in your head, but don't tell me !");
 
