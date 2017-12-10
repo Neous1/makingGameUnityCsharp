@@ -3,9 +3,9 @@ using System.Collections;
 
 public class NumberWizard : MonoBehaviour {
 	//make min nad max global
-	int max = 1000;
-	int min = 1;
-	int guess = 500; 
+	int max ;
+	int min ;
+	int guess; 
 
 	// Use this for initialization
 	void Start () {
@@ -14,8 +14,14 @@ public class NumberWizard : MonoBehaviour {
 			
 	}
 	void StartGame(){
+
+		 max = 1000;
+		 min = 1;
+		guess = 500;
 		//fix the rounding problem to retun max
-		max = max + 1;
+		
+		print ("++++++++++++++++++++++++++");
+
 		print("Welcome to Number Wizard");
 		print("Pick a number in your head, but don't tell me !");	
 		
@@ -25,6 +31,10 @@ public class NumberWizard : MonoBehaviour {
 		
 		print("Is the number higher  or lower than " + guess);
 		print("Up = higher, down = lower , return = equal");
+
+		max = max + 1;
+
+
 	
 	}
 	
@@ -41,6 +51,7 @@ public class NumberWizard : MonoBehaviour {
 
 		} else if (Input.GetKeyDown (KeyCode.Return)) {
 			print ("I won!");	
+			StartGame();
 		}
 	}
 
