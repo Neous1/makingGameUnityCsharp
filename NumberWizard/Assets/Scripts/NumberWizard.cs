@@ -27,15 +27,16 @@ public class NumberWizard : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.UpArrow)) {
-			print ("Up arrow pressed");		
 			//set guess to min
 			min = guess;
 			//reset guess
 			guess = (min + max)/2;
-			print(guess, max);
+			print("Higher or lower that " + guess);
 
 		} else if (Input.GetKeyDown (KeyCode.DownArrow)) {
-			print ("Up down pressed");	
+			max = guess;
+			guess = (min + max)/2;
+			print("Higher or lower that " + guess);
 		} else if (Input.GetKeyDown (KeyCode.Return)) {
 			print ("I won!");	
 		}
