@@ -15,15 +15,15 @@ public class NumberWizard : MonoBehaviour {
 	}
 	void StartGame(){
 
-		 max = 1000;
-		 min = 1;
+		max = 1000;
+		min = 1;
 		guess = 500;
 		//fix the rounding problem to retun max
 		
 		print ("++++++++++++++++++++++++++");
 
 		print("Welcome to Number Wizard");
-		print("Pick a number in your head, but don't tell me !");	
+		print ("Pick a number in your head, but don't tell me !");
 		
 		
 		print("The highest number you can pick is " + max);
@@ -34,8 +34,6 @@ public class NumberWizard : MonoBehaviour {
 
 		max = max + 1;
 
-
-	
 	}
 	
 	// Update is called once per frame
@@ -59,6 +57,6 @@ public class NumberWizard : MonoBehaviour {
 	void NextGuess(){
 		guess = (min + max)/2;
 		print("Higher or lower that " + guess);
-		print("Up = higher, down = lower , return = equal");
+		print ("Up = higher, down = lower , return = equal");
 	}
 }
