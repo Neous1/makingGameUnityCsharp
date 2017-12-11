@@ -6,10 +6,12 @@ public class TextController : MonoBehaviour {
 	//add a text variable of type text 
 	public Text text;
 	private enum States {cell, mirror, sheets_0, lock_0, cell_mirror, sheets_1, lock_1, freedom};
+	private States myState;
 
 	// Use this for initialization
 	void Start () {
 		text.text = "Hello World!"; 	
+
 	}
 	
 	// Update is called once per frame
