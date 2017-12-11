@@ -8,6 +8,7 @@ public class TextController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		text.text = "Hello World!";
 	
 	}
 	
